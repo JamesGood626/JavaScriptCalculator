@@ -85,19 +85,21 @@ var calculatorFunctions = {
   addArray: function() {
       console.log('addArray ran');
 
-    return function() {
-      console.log('returned function ran');
-      $('number').click();
-      totalSum = arr1[0] + arr1[1];
-      for(let i = arr1.length; i > 0; i--){
-        arr1.pop();
-      }
     }
 
   }
-}
+
+var calculatorElement = document.querySelector(".calculator");
+calculatorElement.addEventListener("click", function(e) {
+  if(e.target !== e.currentTarget)  {
+    var calcNum = e.target; //.property to be accessed that'll pass
+                            //along the value to be accepted as an
+                            //arguement to the enterNumber function
+                            //in the calculatorInput object.
+    console.log(calcNum);
+  }
+}, false);
 
 var addition = document.getElementById("addition");
 var subtraction = document.getElementById("subtraction");
 var returnedAddition = addition.addEventListener('click', calculator.addArray);
-console.log(returnedAddition);
