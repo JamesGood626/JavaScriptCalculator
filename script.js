@@ -92,12 +92,13 @@ var calculatorFunctions = {
 var calculatorElement = document.querySelector(".calculator");
 calculatorElement.addEventListener("click", function(e) {
   if(e.target !== e.currentTarget)  {
-    var calcNum = e.target; //.property to be accessed that'll pass
-                            //along the value to be accepted as an
-                            //arguement to the enterNumber function
-                            //in the calculatorInput object.
-    console.log(calcNum);
+    var calcNum = e.target.innerHTML;
+    //Validates that calcNum was one of the number buttons pressed.
+    if(!isNaN(calcNum)) {
+      var numToEnter = calcNum;
+    }
   }
+    console.log(numToEnter); //pass to enterNumber function in the calculatorInput object.
 }, false);
 
 var addition = document.getElementById("addition");
