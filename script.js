@@ -3,82 +3,21 @@ var arr = {
 }
 
 var calculatorInput = {
-  displayArr: function () {
+  displayArr: () => {
   var calcInput = arr.arr1[arr.arr1.length - 1];
   var target = document.getElementById("calc-input");
   target.innerHTML = calcInput;
     console.log(arr.arr1);
   },
-  enterZero: function() {
+  //Strange... function operates fine with regular function declaration, but if I use the arrow syntax then this.displayArr(); must be changed to calculatorInput.displayArr(); Look into.
+  enterNumber: function(calcNum) {
     if(arr.arr1.length > 0) {
       arr.arr1.pop();
     }
-    arr.arr1.push(0);
+    arr.arr1.push(calcNum);
     this.displayArr();
-  },
-  enterOne: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(1);
-    this.displayArr();
-  },
-  enterTwo: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(2);
-    this.displayArr();
-  },
-  enterThree: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(3);
-    this.displayArr();
-  },
-  enterFour: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(4);
-    this.displayArr();
-  },
-  enterFive: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(5);
-    this.displayArr();
-  },
-  enterSix: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(6);
-    this.displayArr();
-  },
-  enterSeven: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(7);
-    this.displayArr();
-  },
-  enterEight: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(8);
-    this.displayArr();
-  },
-  enterNine: function() {
-    if(arr.arr1.length > 0) {
-      arr.arr1.pop();
-    }
-    arr.arr1.push(9);
-    this.displayArr();
-  },
+  }
+
 }
 
 var calculatorFunctions = {
@@ -96,6 +35,7 @@ calculatorElement.addEventListener("click", function(e) {
     //Validates that calcNum was one of the number buttons pressed.
     if(!isNaN(calcNum)) {
       var numToEnter = calcNum;
+      calculatorInput.enterNumber(numToEnter);
     }
   }
     console.log(numToEnter); //pass to enterNumber function in the calculatorInput object.
