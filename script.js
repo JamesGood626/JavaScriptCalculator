@@ -21,8 +21,13 @@ var calculatorInput = {
 }
 
 var calculatorFunctions = {
-  addArray: function() {
-      console.log('addArray ran');
+  addition: function(calculatorElement, firstNum) {
+      //Read number that's currently in the array into a variable.
+    var num1 = firstNum;
+    calculatorElement.addEventListener("click", function(e) {
+
+    }, false);
+
 
     }
 
@@ -31,16 +36,20 @@ var calculatorFunctions = {
 var calculatorElement = document.querySelector(".calculator");
 calculatorElement.addEventListener("click", function(e) {
   if(e.target !== e.currentTarget)  {
-    var calcNum = e.target.innerHTML;
+    var calcBtnPress = e.target.innerHTML;
     //Validates that calcNum was one of the number buttons pressed.
-    if(!isNaN(calcNum)) {
-      var numToEnter = calcNum;
+    if(!isNaN(calcBtnPress)) {
+      var numToEnter = calcBtnPress;
       calculatorInput.enterNumber(numToEnter);
+    }
+    else if(calcBtnPress === '÷' || calcBtnPress === 'x' || calcBtnPress === '-' || calcBtnPress === '+' && arr.arr1 !== 0) {
+      switch (calcBtnPress) {
+        case '÷': calculatorFunctions.divide();
+        case 'x': calculatorFunctions.multiply();
+        case '-': calculatorFunctions.subtraction();
+        case '+': calculatorFunctions.addition(calculatorElement, arr.arr1[0]);
+      }
     }
   }
     console.log(numToEnter); //pass to enterNumber function in the calculatorInput object.
 }, false);
-
-var addition = document.getElementById("addition");
-var subtraction = document.getElementById("subtraction");
-var returnedAddition = addition.addEventListener('click', calculator.addArray);
