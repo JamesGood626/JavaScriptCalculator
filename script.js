@@ -14,6 +14,9 @@ var multipleCasesHandled = {
       var numToEnter = calcBtnPress;
       calculatorInput.multipleDigits(numToEnter);
       }
+      else if (calcBtnPress === '.') {
+        calculatorInput.multipleDigits(calcBtnPress);
+      }
       else if((calcBtnPress === '÷' || calcBtnPress === 'x' || calcBtnPress === '-' || calcBtnPress === '+')
             && (arr.numerousDigits.length === 1 || arr.arr1.length === 1)) {
           if(arr.numerousDigits > 0) {
