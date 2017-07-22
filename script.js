@@ -1,5 +1,6 @@
 var calculatorElement = document.querySelector(".calculator");
 
+ 
 var arr = {
   arr1: [],
   numerousDigits: []
