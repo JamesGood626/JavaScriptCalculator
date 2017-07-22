@@ -1,57 +1,54 @@
+<!DOCTYPE html>
 <html>
 
   <head>
-    <link rel="stylesheet" href="style.css">
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
     <div class="container">
       <div class="calc-display">
+        <div class=calc-input-container>
         <p id="calc-input"></p>
+        </div>
       </div>
       <div class="calculator">
       <div class="calc-top">
-        <div class="btn-col">
-          <button class="btn-fill btn-style2">C</button>
-          <button class="btn-fill btn-style3">7</button>
-          <button class="btn-fill btn-style3">4</button>
-          <button class="btn-fill btn-style3">1</button>
-        </div>
-        <div class="btn-col">
-          <button class="btn-fill btn-style2">+/-</button>
-          <button class="btn-fill btn-style3">8</button>
-          <button class="btn-fill btn-style3 number">5</button>
-          <button class="btn-fill btn-style3 number">2</button>
-        </div>
-        <div class="btn-col">
-          <button class="btn-fill btn-style2">%</button>
-          <button class="btn-fill btn-style3 number">9</button>
-          <button class="btn-fill btn-style3 number" >6</button>
-          <button class="btn-fill btn-style3 number">3</button>
-        </div>
-        <div class="btn-col">
-          <button class="btn-fill btn-style1">÷</button>
-          <button class="btn-fill btn-style1">x</button>
-          <button id="subtraction" class="btn-fill btn-style1">-</button>
-          <button id="addition" class="btn-fill btn-style1">+</button>
+        <div class="row-wrap">
+          <button class="btn-fill btn-style contentCenter">C</button>
+          <button class="btn-fill btn-style"></button>
+          <button class="btn-fill btn-style"></button>
+
+          <button class="btn-fill btn-style contentCenter">÷</button>
+
+
+<!--           <button class="btn-fill btn-style no-display">+/-</button> -->
+          <button class="btn-fill btn-style">7</button>
+          <button class="btn-fill btn-style number">8</button>
+          <button class="btn-fill btn-style number">9</button>
+          <button class="btn-fill btn-style">x</button>
+
+
+<!--           <button class="btn-fill btn-style no-display">%</button> -->
+          <button class="btn-fill btn-style number">4</button>
+          <button class="btn-fill btn-style number" >5</button>
+          <button class="btn-fill btn-style number">6</button>
+          <button class="btn-fill btn-style number">-</button>
+
+
+          <button class="btn-fill btn-style">1</button>
+          <button class="btn-fill btn-style">2</button>
+          <button id="subtraction" class="btn-fill btn-style">3</button>
+          <button id="addition" class="btn-fill btn-style">+</button>
+          <button class=" btn-fill btn-style number">0</button>
+          <button class= "btn-fill btn-style">.</button>
+          <button class=" btn-fill btn-style">=</button>
         </div>
        </div>
-       <div class="calc-foot">
-        <div class="btn-row">
-          <button class="btn-style3 number" id="bottom-row-adjust2 number">0</button>
-          <button class= "btn-style3" id="bottom-row-adjust1">.</button>
-          <button class="btn-style1" id="bottom-row-adjust1">=</button>
-        </div>
       </div>
-      </div>
-
-
     </div>
+
+  <script type="text/javascript" src="script.js"></script>
   </body>
 
 </html>

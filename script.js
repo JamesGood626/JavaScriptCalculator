@@ -128,4 +128,5 @@ var calculatorInput = {
     } //end calculatorInput.calculateArray
 }
 
+
 calculatorElement.addEventListener("click", multipleCasesHandled.listener, false);
