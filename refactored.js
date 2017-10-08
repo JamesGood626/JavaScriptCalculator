@@ -7,7 +7,7 @@
 // 5. calculateArr will be cleared and the result of the calculation will be pushed to calculateArr[0]
 
 
-const calculatorElement = document.querySelector('calculator');
+const calculatorElement = document.querySelector('calculator')
 const display = document.getElementById('calc-display')
 
 class Calculator {
