@@ -10,6 +10,7 @@
 const calculatorElement = document.querySelector('calculator')
 const display = document.getElementById('calc-display')
 
+
 class Calculator {
   constructor(calc, display) {
     this.calculateArr = []
