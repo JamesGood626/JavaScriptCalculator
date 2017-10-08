@@ -89,7 +89,6 @@ var calculatorInput = {
     }
   }, //End consolidateMultipleDigits
 
-  //Strange... function operates fine with regular function declaration, but if I use the arrow syntax then this.displayArr(); must be changed to calculatorInput.displayArr(); Look into.
   enterNumber: function(calcNum) {
     if(arr.arr1.length === 0 || arr.arr1.length === 2) {
       arr.arr1.push(calcNum);
@@ -104,6 +103,7 @@ var calculatorInput = {
         this.displayArr();
     }
   }, //end calculatorInput.enterNumber
+  
   enterOperator: function(operator) {
         if(operator === 'x') {
           operator = '*';
