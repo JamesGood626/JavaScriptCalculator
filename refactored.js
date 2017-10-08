@@ -6,6 +6,7 @@
    // a call to the calculate function if calculatteArr.length === 3
 // 5. calculateArr will be cleared and the result of the calculation will be pushed to calculateArr[0]
 
+
 const calculatorElement = document.querySelector(".calculator");
 const display = document.getElementById('calc-display')
 
